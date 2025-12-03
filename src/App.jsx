@@ -1,22 +1,10 @@
-import { useState } from "react";
-import { TaskProvider } from "./TaskContext";
-import Sidebar from "./components/Sidebar";
-import TaskBoard from "./components/TaskBoard";
-import AddTaskModal from "./components/AddTaskModal";
-import Navbar from "./components/shared/Navbar";
-import ColorReactionGame from "./components/ColorReactionGame";
+import PageWrapper from './components/Layout/PageWrapper'
+import ColorReactionGame from './components/Game/ColorReactionGame'
 
-function App() {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [editTask, setEditTask] = useState(null);
-  const [searchText, setSearchText] = useState("");
-
+export default function App(){
   return (
-    <>
-    <ColorReactionGame></ColorReactionGame>
-    
-    </>
-  );
+    <PageWrapper>
+      <ColorReactionGame />
+    </PageWrapper>
+  )
 }
-
-export default App;
